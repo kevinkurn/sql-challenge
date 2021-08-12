@@ -1,6 +1,6 @@
 ﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
-
+-- Student NOTE: please import the csv files based on the following table order: Department, job_title, employees. The remaining tables can be imported in any order
 
 CREATE TABLE "Departments" (
     "department_id" VARCHAR   NOT NULL,
@@ -51,7 +51,6 @@ CREATE TABLE "job_title" (
      )
 );
 
--- NOTE: the below foreign key constraint is added after uploading csv file into the above tables
 
 ALTER TABLE "department_employees" ADD CONSTRAINT "fk_department_employees_employee_id" FOREIGN KEY("employee_id")
 REFERENCES "employees" ("employee_id");
